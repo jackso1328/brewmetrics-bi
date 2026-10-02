@@ -1,13 +1,5 @@
 # Copilot Notes
 
-## Purpose
-
-GitHub Copilot was used as an assistant for developing and reviewing DAX measures in the BrewMetrics Coffee Co. Power BI semantic model.
-
-Two measures were reviewed:
-1. MoM Growth %
-2. City Sales Rank
-
 ## 1. MoM Growth %
 
 ### Prompt
