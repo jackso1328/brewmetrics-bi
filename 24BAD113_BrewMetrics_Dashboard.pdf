@@ -1,0 +1,109 @@
+BREWMETRICS COFFEE CO.
+BUSINESS INTELLIGENCE MINI PROJECT
+
+1. PROJECT OVERVIEW
+
+The BrewMetrics Coffee Co. Business Intelligence project focuses on developing an interactive Power BI solution for analysing coffee sales performance.
+
+The project uses sales transaction data from April to June and provides insights into product trends, city-level performance, store-format performance, and sales growth.
+
+The project is also maintained using GitHub and Power BI Project (.pbip) format so that changes to the BI solution can be tracked and reviewed through version control.
+
+2. DATA MODEL
+
+The Power BI solution uses a Star Schema consisting of a central fact table and multiple dimension tables.
+
+Fact Table:
+
+Fact_Sales
+- Date
+- City
+- Store Format
+- Item
+- Quantity
+- Unit Price
+- Sales Amount
+
+Dimension Tables:
+
+Dim_Date
+Used for date and time-based analysis.
+
+Dim_City
+Used for analysing sales performance across different cities.
+
+Dim_Product
+Used for analysing product-level sales performance.
+
+Dim_StoreFormat
+Used for comparing Flagship, Kiosk, and Drive-Thru stores.
+
+The dimension tables are connected to the Fact_Sales table using one-to-many relationships.
+
+3. DAX MEASURES
+
+The following measures were developed for the Power BI solution:
+
+- Total Sales
+- Total Quantity
+- MoM Growth %
+- Running Total Sales
+- City Sales Rank
+- Average Sales per Transaction
+
+These measures support sales growth analysis, cumulative sales analysis, city ranking, quantity analysis, and overall performance analysis.
+
+4. DASHBOARD FEATURES
+
+The Power BI dashboard provides interactive analysis of sales performance.
+
+The dashboard includes:
+
+- Total Sales summary
+- Cold Brew sales trend
+- City-level sales comparison
+- Product-level sales analysis
+- City slicer
+- City to Store Format drill-down hierarchy
+
+The drill-down feature allows users to move from overall city performance to individual store-format performance within each city.
+
+5. KEY BUSINESS INSIGHTS
+
+Insight 1: Cold Brew Seasonal Pattern
+
+Cold Brew sales show a noticeable increase during April and May. This indicates a seasonal sales pattern for Cold Brew during the analysed period.
+
+Insight 2: City-Level Performance
+
+Bengaluru consistently records higher sales performance compared with the other cities in the dataset. The City Sales Rank measure and city-level visualisations make this difference easier to identify.
+
+Insight 3: Store Format Analysis
+
+The City to Store Format drill-down provides a more detailed view of sales performance by allowing users to analyse Flagship, Kiosk, and Drive-Thru stores within individual cities.
+
+6. VERSION CONTROL
+
+GitHub was used to maintain the Power BI project and its development history.
+
+The project includes the Power BI Project file, report files, semantic model files, documentation, and supporting project files.
+
+The commit history provides a record of changes made during the development of the BI solution.
+
+7. TOOLS USED
+
+- Microsoft Power BI Desktop
+- Power BI Project (.pbip)
+- Power Query
+- DAX
+- GitHub
+- Visual Studio Code
+- GitHub Copilot
+
+8. CONCLUSION
+
+The BrewMetrics Coffee Co. Business Intelligence solution demonstrates how Power BI can be used to transform sales transaction data into an interactive analytical dashboard.
+
+The solution enables users to analyse sales trends, compare city performance, examine product patterns, and explore store-format performance.
+
+Using GitHub and Power BI Project format also provides a structured and traceable development workflow for the BI solution.
