@@ -1,0 +1,33 @@
+table Dim_Product
+	lineageTag: de8369bf-aa2c-4bc8-a34e-f13ae74f8237
+
+	column Item
+		dataType: string
+		lineageTag: ac7eb9f5-3a29-4e51-9fd9-33197c5d5db6
+		summarizeBy: none
+		sourceColumn: Item
+
+		annotation SummarizationSetBy = Automatic
+
+	column Category
+		dataType: string
+		lineageTag: f6e8903e-f06b-4ec3-a44b-1267944db549
+		summarizeBy: none
+		sourceColumn: Category
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_Product = m
+		mode: import
+		source =
+				let
+				    Source = Fact_Sales,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"item", "category"}),
+				    #"Renamed Columns" = Table.RenameColumns(#"Removed Other Columns",{{"item", "Item"}, {"category", "Category"}})
+				in
+				    #"Renamed Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+

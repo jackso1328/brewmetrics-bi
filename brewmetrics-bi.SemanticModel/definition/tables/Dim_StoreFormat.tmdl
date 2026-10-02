@@ -1,0 +1,24 @@
+table Dim_StoreFormat
+	lineageTag: 75c747cf-3cb0-4046-81bb-6af4187b4a96
+
+	column store_format
+		dataType: string
+		lineageTag: 9ca1d3ab-ae4b-4cfd-b7d0-11e5db307c0f
+		summarizeBy: none
+		sourceColumn: store_format
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Dim_StoreFormat = m
+		mode: import
+		source =
+				let
+				    Source = Fact_Sales,
+				    #"Removed Other Columns" = Table.SelectColumns(Source,{"store_format"})
+				in
+				    #"Removed Other Columns"
+
+	annotation PBI_NavigationStepName = Navigation
+
+	annotation PBI_ResultType = Table
+
