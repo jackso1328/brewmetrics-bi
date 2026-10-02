@@ -1,4 +1,4 @@
-# BrewMetrics Coffee Co. — Business Intelligence Project
+# BrewMetrics Coffee Co. - Business Intelligence Project
 
 ## Project Purpose
 
@@ -74,18 +74,6 @@ The intended development sequence is:
 6. Final dashboard export
 
 The Git history is retained so that project development can be reviewed rather than treating the Power BI report as a single final file.
-
-## Project Deliverables
-
-The repository contains:
-
-- Power BI Project (`.pbip`)
-- Power BI report files
-- Power BI semantic model files
-- `README.md`
-- `NOTES.md`
-- `REFLECTION.md`
-- Final dashboard PDF
 
 ## Tools Used
 
